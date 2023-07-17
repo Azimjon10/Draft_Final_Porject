@@ -29,6 +29,17 @@ def present(request):
     }
     return render(request, 'core\present.html', context)
 
+def index(request):
+    scanned = LastFace.objects.all().order_by('date').reverse()
+    present = Profile.objects.filter(present=True).order_by('updated').reverse()
+    absent = Profile.objects.filter(present=False).order_by('shift')
+    context = {
+        'scanned': scanned,
+        'present': present,
+        'absent': absent,
+    }
+    return render(request, 'core\index.html', context)
+
 
 def ajax(request):
     last_face = LastFace.objects.last()

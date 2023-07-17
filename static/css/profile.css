@@ -301,9 +301,8 @@ a{
     background-color: #ececf1;
     position: relative;
     display: flex;
-    top: 1%;
-    left: 15%;
-    right: 3%;
+    bottom: 80px;
+    right: 10px;
     width: 1000px;  /* Increased value*/
     height: 500px;
   }

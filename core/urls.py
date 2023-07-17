@@ -6,6 +6,7 @@ urlpatterns = [
     path('', present, name= 'present'),
     path('ajax/', ajax, name= 'ajax'),
     path('scan/',scan,name='scan'),
+    path('', index, name='index'),
     path('profiles/', profiles, name= 'profiles'),
     path('details/', details, name= 'details'),
 
